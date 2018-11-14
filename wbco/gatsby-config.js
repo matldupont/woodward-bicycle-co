@@ -3,6 +3,17 @@ module.exports = {
     title: 'Gatsby Default Starter',
   },
   plugins: [
+    {
+      resolve: 'gatsby-plugin-eslint',
+      options: {
+        test: /\.js$|\.jsx$/,
+        exclude: /(node_modules|cache|public)/,
+        options: {
+          emitWarning: true,
+          failOnError: false
+        }
+      }
+    },
     'gatsby-plugin-react-helmet',
     {
       resolve: `gatsby-source-filesystem`,
@@ -11,6 +22,7 @@ module.exports = {
         path: `${__dirname}/src/images`,
       },
     },
+    'gatsby-plugin-styled-components',
     'gatsby-transformer-sharp',
     'gatsby-plugin-sharp',
     {
