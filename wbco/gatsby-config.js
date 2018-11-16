@@ -1,6 +1,6 @@
 module.exports = {
   siteMetadata: {
-    title: 'Gatsby Default Starter',
+    title: 'Woodward Bicycle Co.',
   },
   plugins: [
     {
@@ -21,6 +21,9 @@ module.exports = {
         name: `images`,
         path: `${__dirname}/src/images`,
       },
+    },
+    {
+      resolve: 'gatsby-plugin-react-svg',
     },
     'gatsby-plugin-styled-components',
     'gatsby-transformer-sharp',
