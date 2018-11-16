@@ -76,7 +76,7 @@ const IndexPage = () => (
         </ImageContainer>
         <TextContainer>
           <Quote>
-            <div>You love your bike.</div>
+            <div>You love your  adsfdsafbike.</div>
             <div>So do I.</div>
           </Quote>
           <Author>~ Lukasz Dybinski</Author>  
