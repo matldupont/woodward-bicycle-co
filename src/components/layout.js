@@ -4,7 +4,7 @@ import Helmet from 'react-helmet'
 import { StaticQuery, graphql } from 'gatsby'
 import { createGlobalStyle } from 'styled-components';
 
-import Header from './Header'
+import Header from './header'
 // import './layout.css'
 
 
