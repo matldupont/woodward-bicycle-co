@@ -19,7 +19,7 @@ const TheTuneImage = () => (
       query {
         placeholderImage: file(relativePath: { eq: "thetune.jpg" }) {
           childImageSharp {
-            fluid {
+            fluid(maxWidth: 412) {
               ...GatsbyImageSharpFluid_tracedSVG
             }
           }
