@@ -20,7 +20,6 @@ const MainImage = () => (
         placeholderImage: file(relativePath: { eq: "main.jpg" }) {
           childImageSharp {
             fluid {
-              ...GatsbyImageSharpFluid,
               ...GatsbyImageSharpFluid_tracedSVG
             }
           }
@@ -30,4 +29,5 @@ const MainImage = () => (
     render={data => <Img fluid={data.placeholderImage.childImageSharp.fluid} />}
   />
 )
+
 export default MainImage;

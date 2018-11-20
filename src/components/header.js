@@ -4,7 +4,7 @@ import { Link } from 'gatsby'
 import styled from 'styled-components';
 import Crown from '../images/WBco.logo.crown.svg';
 import Hamburger from '../images/Hamburger.svg';
-import { border } from '../utilities/styles';
+import { border, color } from '../utilities/styles';
 
 const HeaderContainer = styled.header`
   border-bottom: 1px solid ${border.color};
@@ -21,7 +21,7 @@ const HeaderContainer = styled.header`
     &:visited,
     &:hover,
     &:active {
-      color: #000000;
+      color: ${color.black};
     }
 
   }

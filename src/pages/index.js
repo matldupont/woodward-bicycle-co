@@ -2,8 +2,9 @@ import React from 'react'
 // import { Link } from 'gatsby'
 import styled from 'styled-components';
 
-import Layout from '../components/layout'
-import MainImage from '../components/image'
+import Layout from '../components/Layout'
+import MainImage from '../components/MainImage'
+import TheTuneImage from '../components/TheTuneImage';
 
 import { color } from '../utilities/styles'
 
@@ -45,7 +46,7 @@ const TextContainer = styled.h1`
   top: 4rem;
   right: 0;
   width: calc(100vw - 4rem);
-  background: ${color.greyTransparent};
+  background: ${color.grey.transparent};
   color: ${color.white};
   padding: 2rem;
   font-size: 2.6rem;
@@ -67,6 +68,100 @@ const Author = styled.div`
   letter-spacing: 1px;
 `;
 
+const TheTuneSection = styled.section`
+  margin-top: 8rem;
+  
+`;
+
+const TheTuneText = styled.div`
+  font-size: 1.8rem;
+  line-height: 2.8rem;
+  padding: 0 2rem;
+  letter-spacing: 0.4px;
+  color: ${color.grey.light};
+  font-weight: 500;
+  margin-bottom: 2rem;
+`;
+
+const LeadingCapital = styled.span`
+  font-weight: 600;
+  font-size: 3rem;
+  font-style: italic;
+`;
+
+const TheTuneContainer = styled.div`
+  box-shadow: 0 0px 70px 3px rgba(0,0,0,0.2);
+  margin-bottom: 30rem;
+  position: relative;
+`;  
+
+const TheTuneOverlayText = styled.div`
+  position: absolute;
+  color: #fff;
+  background: rgba(0,0,0,.5);
+  text-transform: uppercase;
+  padding: 1rem;
+  font-weight: 300;
+`;
+
+const TheTuneTitle = styled(TheTuneOverlayText)`
+  top: 6rem;
+  left: 3rem;
+  font-size: 5rem;
+`;
+
+const TheTunePrice = styled(TheTuneOverlayText)`
+  top: 12.5rem;
+  left: 5rem;
+  font-size: 4rem;
+`;
+
+const TheTuneButton = styled.button`
+  position: absolute;
+  bottom: 1rem;
+  right: 1rem;
+  height: 13rem;
+  width: 13rem;
+  background: ${color.grey.blue};
+  border: none;
+  padding: 0;
+
+  border-radius: 50%;
+  box-shadow: 0px 5px 14px 0px hsla(0, 0%, 0%, 0.95);
+  display: flex;
+  justify-content: center;
+`;
+
+const TheTuneButtonRing = styled.div`
+  background: #fff;
+  height: 12rem;
+  width: 12rem;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+`;
+
+const TheTuneButtonInside = styled.div`
+  background: ${color.grey.blue};
+  height: 11rem;
+  width: 11rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+`;
+
+const TheTuneButtonText = styled.div`
+  color: #fff;
+  font-size: 2.2rem;
+  font-weight: 500;
+  padding: .3rem .3rem;
+  border-bottom: 2px solid #fff;
+  margin-top: -1rem;
+`;
+
+
 const IndexPage = () => (
   <Layout>
     <Main>
@@ -83,6 +178,25 @@ const IndexPage = () => (
         </TextContainer>
       </Banner>
     </Main>
+    <TheTuneSection>
+      <TheTuneText>
+      <LeadingCapital>W</LeadingCapital>elcome, Woodward Bicycle Co is a repair and build studio in Carlington, Ottawa. All repairs are by appointment in order to give you our undivided attention and all starts with…
+      </TheTuneText>
+      <TheTuneContainer>
+        <TheTuneImage />
+        <TheTuneTitle>the tune</TheTuneTitle>
+        <TheTunePrice>$145</TheTunePrice>
+        <TheTuneButton>
+          <TheTuneButtonRing>
+            <TheTuneButtonInside>
+              <TheTuneButtonText>
+                Details
+              </TheTuneButtonText>
+            </TheTuneButtonInside>
+          </TheTuneButtonRing>
+        </TheTuneButton>
+      </TheTuneContainer>
+    </TheTuneSection>
   </Layout>
 )
 

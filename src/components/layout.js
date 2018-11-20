@@ -4,12 +4,12 @@ import Helmet from 'react-helmet'
 import { StaticQuery, graphql } from 'gatsby'
 import { createGlobalStyle } from 'styled-components';
 
-import Header from './header'
+import Header from './Header'
 // import './layout.css'
 
 
 const GlobalStyle = createGlobalStyle`
-  @import url('https://fonts.googleapis.com/css?family=Montserrat:300,400,600|Raleway');
+  @import url('https://fonts.googleapis.com/css?family=Montserrat:300,500,600|Raleway:300,400,500,600');
 
   html {
     font-size: 62.5%;
