@@ -78,7 +78,7 @@ const TheTuneText = styled.div`
   line-height: 2.8rem;
   padding: 0 2rem;
   letter-spacing: 0.4px;
-  color: ${color.grey.light};
+  color: ${color.black};
   font-weight: 500;
   margin-bottom: 2rem;
 `;
