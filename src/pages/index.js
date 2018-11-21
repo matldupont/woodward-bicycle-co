@@ -122,7 +122,7 @@ const TheTuneButton = styled.button`
   right: 1rem;
   height: 13rem;
   width: 13rem;
-  background: ${color.grey.blue};
+  background: ${color.blue.dark};
   border: none;
   padding: 0;
 
@@ -143,7 +143,7 @@ const TheTuneButtonRing = styled.div`
 `;
 
 const TheTuneButtonInside = styled.div`
-  background: ${color.grey.blue};
+  background: ${color.blue.dark};
   height: 11rem;
   width: 11rem;
   display: flex;

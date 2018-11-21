@@ -9,8 +9,11 @@ export const color = {
   grey: {
     light: '#787878',
     main: '#454545',
-    transparent: '#45454599',
-    blue: '#B6C4CC',
+    transparent: '#454545BB',
+  },
+  blue: {
+    main: '#B6C4CC',
+    dark: '#475b66',
   },
   black: '#000000',
 };
