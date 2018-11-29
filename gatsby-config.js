@@ -40,6 +40,6 @@ module.exports = {
     //     display: 'minimal-ui',
     //     icon: 'src/images/WBco-logo.jpg', // This path is relative to the root of the site.
     //   },
-    },
+    // },
   ],
 }
