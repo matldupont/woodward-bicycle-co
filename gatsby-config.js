@@ -28,18 +28,18 @@ module.exports = {
     'gatsby-plugin-styled-components',
     'gatsby-transformer-sharp',
     'gatsby-plugin-sharp',
-    'gatsby-plugin-offline',
-    {
-      resolve: `gatsby-plugin-manifest`,
-      options: {
-        name: 'Woodward Bicycle Co.',
-        short_name: 'WBCo',
-        start_url: '/',
-        background_color: '#FFFFFF',
-        theme_color: '#663399',
-        display: 'minimal-ui',
-        icon: 'src/images/WBco-logo.jpg', // This path is relative to the root of the site.
-      },
+    // 'gatsby-plugin-offline',
+    // {
+    //   resolve: `gatsby-plugin-manifest`,
+    //   options: {
+    //     name: 'Woodward Bicycle Co.',
+    //     short_name: 'WBCo',
+    //     start_url: '/',
+    //     background_color: '#FFFFFF',
+    //     theme_color: '#663399',
+    //     display: 'minimal-ui',
+    //     icon: 'src/images/WBco-logo.jpg', // This path is relative to the root of the site.
+    //   },
     },
   ],
 }
