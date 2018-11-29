@@ -6,7 +6,7 @@ import Layout from '../components/layout'
 import MainImage from '../components/MainImage'
 import TheTuneImage from '../components/TheTuneImage';
 
-import { color } from '../utilities/styles'
+import { color, media } from '../utilities/styles'
 
 const Main = styled.main`
   display: flex;
@@ -69,8 +69,17 @@ const Author = styled.div`
 `;
 
 const TheTuneSection = styled.section`
-  margin-top: 8rem;
-  
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 8rem auto 0;
+  max-width: 100rem;
+
+  ${media.largeAndUp`
+    flex-direction: row;
+    align-items: flex-start;
+  `}
 `;
 
 const TheTuneText = styled.div`
@@ -80,7 +89,8 @@ const TheTuneText = styled.div`
   letter-spacing: 0.4px;
   color: ${color.black};
   font-weight: 500;
-  margin-bottom: 2rem;
+  margin-bottom: 6rem;
+  max-width: 45rem;
 `;
 
 const LeadingCapital = styled.span`
@@ -93,6 +103,8 @@ const TheTuneContainer = styled.div`
   box-shadow: 0 0px 70px 3px rgba(0,0,0,0.2);
   margin-bottom: 30rem;
   position: relative;
+  height: 37rem;
+  width: 37rem;
 `;  
 
 const TheTuneOverlayText = styled.div`
