@@ -1,7 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import { Link } from 'gatsby'
-import styled, { css, keyframes } from 'styled-components';
+import styled from 'styled-components';
 import Crown from '../images/WBco.logo.crown.svg';
 import Hamburger from '../images/Hamburger.svg';
 import { border, color } from '../utilities/styles';

@@ -5,7 +5,7 @@ import { StaticQuery, graphql } from 'gatsby'
 import { createGlobalStyle } from 'styled-components';
 
 import NavMenu from './NavMenu'
-import Header from './Header'
+import Header from './header'
 // import './layout.css'
 
 
