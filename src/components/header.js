@@ -65,18 +65,15 @@ const HamburgerWrapper = styled.span`
       fill: ${color.white};
 
       path:nth-child(1) {
-        transform: rotate(-45deg) translate(-11px, 13px);
-     
+        transform: rotate(45deg) translate(4px,-8px);
       }
 
       path:nth-child(2) {
-        transform: translateX(47%) scaleX(.1);
-        
+        transform: translateX(47%) scaleX(.1);  
       }
 
       path:nth-child(3) {
-        transform: rotate(45deg) translate(3px, -20px)
-        
+        transform: rotate(-45deg) translate(-12px, 2px);
       }
     `;
   }}
