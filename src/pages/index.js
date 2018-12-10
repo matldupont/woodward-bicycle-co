@@ -2,7 +2,7 @@ import React from 'react'
 // import { Link } from 'gatsby'
 import styled from 'styled-components';
 
-import Layout from '../components/layout'
+import Layout from '../components/Layout'
 import MainImage from '../components/MainImage'
 import TheTuneImage from '../components/TheTuneImage';
 
