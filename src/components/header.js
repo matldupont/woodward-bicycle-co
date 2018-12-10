@@ -51,77 +51,6 @@ const HeaderContainer = styled.header`
   } 
 `;
 
-// const topRotate = keyframes`
-//   0% {
-//     transform: translate(0,0) rotate(0);
-//   }
-
-//   30% {
-//     transform: translateY(.6rem);
-//   }
-
-//   100% {
-//     transform: rotate(-45deg) translate(-11px, 13px);
-//   }
-// `;
-
-// const bottomRotate = keyframes`
-//   0% {
-//     transform: translate(0,0) rotate(0);
-//   }
-
-//   30% {
-//     transform: translateY(-6px);
-//   }
-
-//   100% {
-//     transform: rotate(45deg) translate(3px, -20px)
-//   }
-// `;
-
-// const middleShrink = keyframes`
-//   0% {
-//     transform: translate(0,0) scale(1);
-//   }
-
-//   30% {
-//     transform: translateX(47%) scaleX(.1);
-//   }
-
-//   100% {
-//     transform: translateX(47%) scaleX(.1);
-//   }
-// `;
-
-// const middleGrow = keyframes`
-//   0% {
-//     transform: translateX(47%) scaleX(.1);
-//   }
-
-//   30% {
-//     transform: translateX(47%) scaleX(.1);
-//   }
-
-//   100% {
-//     transform: translate(0,0) scaleX(1);
-//   }
-// `;
-
-// const topRotateAnimation = css`
-//   ${topRotate} .3s ease-in forwards;
-// `
-// const bottomRotateAnimation = css`
-//   ${bottomRotate} .3s ease-in forwards;
-// `;
-
-// const middleShrinkAnimation = css`
-//   ${middleShrink} .3s ease-in forwards;
-// `;
-
-// const middleGrowAnimation = css`
-//   ${middleGrow} .3s ease-in forwards;
-// `;
-
 const HamburgerWrapper = styled.span`
   svg {
     fill: ${color.black};
@@ -187,7 +116,12 @@ const Header = ({ onMenuToggle, navIsOpen }) => {
         </TitleContainer>
         
       </Link>
-      <HamburgerWrapper navIsOpen={navIsOpen} role="button" onClick={onMenuToggle}>
+      <HamburgerWrapper
+        navIsOpen={navIsOpen}
+        role="button"
+        onClick={onMenuToggle}
+        aria-label="open menu"
+      >
         <Hamburger />
       </HamburgerWrapper>
 
