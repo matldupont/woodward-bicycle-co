@@ -123,7 +123,7 @@ const Header = ({ onMenuToggle, navIsOpen }) => {
       <HamburgerWrapper
         navIsOpen={navIsOpen}
         onClick={onMenuToggle}
-        
+        aria-label="open menu"
       >
         <Hamburger />
       </HamburgerWrapper>
