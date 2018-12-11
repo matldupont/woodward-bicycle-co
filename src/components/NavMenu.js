@@ -30,21 +30,42 @@ const NavMenuWrapper = styled.nav`
 const NavDivider = styled.div`
   content: " ";
   margin: 3rem 0 4rem;
-  border-bottom: 2px solid #fff;
+  border-bottom: 2px solid ${color.white};
   height: 1rem;
   width: 5rem;
+
+
+  &:nth-child(1) {
+    transition: all .2s ease-in .1s;
+  }
+
+  &:nth-child(3) {
+    transition: all .2s ease-in .3s;
+  }
+
+  &:nth-child(5) {
+    transition: all .2s ease-in .5s;
+  }
+
+  ${({ isOpen }) => {
+    return isOpen && `
+      border-bottom: 2px solid ${color.white};
+    `;
+  }}
 `;
 
 const NavLinks = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  opacity: 0;
+  /* visibility: hidden; */
+  /* opacity: 0; */
   transition: all .3s ease .3s;
 
   ${({ isOpen }) => {
     return isOpen && `
-      opacity: 1;
+      // opacity: 1;
+      // visibility: visible;
     `;
   }}
 
@@ -57,13 +78,32 @@ const NavLinks = styled.div`
     text-decoration: none;
     padding-bottom: .5rem;
     border-bottom: 2px solid transparent;
-    transition: all .3s;
+    
+    opacity: 0;
 
     &:hover,
     &:active,
     &:focus { 
       border-bottom: 2px solid ${color.white};
     }
+
+    &:nth-child(1) {
+      transition: opacity .2s ease-in .1s;
+    }
+
+    &:nth-child(3) {
+      transition: opacity .2s ease-in .3s;
+    }
+
+    &:nth-child(5) {
+      transition: opacity .2s ease-in .5s;
+    }
+
+    ${({ isOpen }) => {
+        return isOpen && `
+          opacity: 1;
+        `;
+      }}
   }
 
   & > a:first-child {
@@ -82,12 +122,11 @@ const NavMenu = ({ isOpen }) => {
     <NavMenuWrapper isOpen={isOpen}>
       <NavLinks isOpen={isOpen}>
         <Link to="/book">Book Now</Link>
-        <NavDivider />
+        <NavDivider isOpen={isOpen} />
         <Link to="/services">Services</Link>
-        <NavDivider />
+        <NavDivider isOpen={isOpen} />
         <Link to="/about">About Me</Link>
       </NavLinks>
-      
     </NavMenuWrapper>
   )
 }

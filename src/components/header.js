@@ -51,8 +51,10 @@ const HeaderContainer = styled.header`
   } 
 `;
 
-const HamburgerWrapper = styled.span`
+const HamburgerWrapper = styled.button`
   margin-right: 1rem;
+  border: none;
+  background: none;
   
   svg {
     fill: ${color.black};
@@ -120,7 +122,6 @@ const Header = ({ onMenuToggle, navIsOpen }) => {
         
       <HamburgerWrapper
         navIsOpen={navIsOpen}
-        role="button"
         onClick={onMenuToggle}
         aria-label="open menu"
       >
