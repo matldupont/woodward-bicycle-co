@@ -8,6 +8,7 @@ export const border = {
 
 export const color = {
   white: '#FFFFFF',
+  gold: '#EBC85B',
   grey: {
     light: '#787878',
     main: '#454545',

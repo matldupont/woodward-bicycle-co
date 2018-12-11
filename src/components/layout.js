@@ -44,7 +44,7 @@ const GlobalStyle = createGlobalStyle`
 
 class Layout extends React.Component {
   state = {
-    navOpen: false,
+    navOpen: true,
   };
 
   toggleMenu = () => {
