@@ -52,9 +52,12 @@ const HeaderContainer = styled.header`
 `;
 
 const HamburgerWrapper = styled.span`
+  margin-right: 1rem;
+  
   svg {
     fill: ${color.black};
   }
+  
   path {
     transition: transform .3s;
     transform: rotate(0) translate(0, 0) scaleX(1);
@@ -86,6 +89,7 @@ const TitleContainer = styled.div`
   text-transform: uppercase;
   text-decoration: none;
   letter-spacing: 2px;
+  margin-right: -1rem;
 
   display: flex;
   flex-direction: column;
@@ -100,19 +104,20 @@ const Header = ({ onMenuToggle, navIsOpen }) => {
   return (
     <HeaderContainer navIsOpen={navIsOpen}>
       <Crown style={{ height: '4.5rem' }}/>
-      <Link
-        to="/"
-      >
-        <TitleContainer navIsOpen={navIsOpen}>
-          <span>
+      
+      <TitleContainer navIsOpen={navIsOpen}>
+        <Link
+          to="/"
+        >
+          <div>
             woodward
-          </span>
-          <span>
+          </div>
+          <div>
             bicycle co.
-          </span>
-        </TitleContainer>
+          </div>
+        </Link>
+      </TitleContainer>
         
-      </Link>
       <HamburgerWrapper
         navIsOpen={navIsOpen}
         role="button"

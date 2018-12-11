@@ -10,15 +10,20 @@ const NavMenuWrapper = styled.nav`
   width: 100vw;
   background: #454545;
   z-index:99;
-  transition: all .2s;
+  transition: height .2s ease-in;
   display: flex;
   justify-content: center;
   align-items: center;
+  overflow: hidden;
+  /* top: -100vh; */
 
   height: 0;
 
   ${({ isOpen }) => {
-    return isOpen && `height: 100vh;`;
+    return isOpen && `
+      height: 100vh;
+      // top: 0;
+    `;
   }}
 `;
 
@@ -34,6 +39,15 @@ const NavLinks = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
+  opacity: 0;
+  transition: all .3s ease .3s;
+
+  ${({ isOpen }) => {
+    return isOpen && `
+      opacity: 1;
+    `;
+  }}
+
   
   & > a {
     font-size: 3rem;
@@ -66,12 +80,12 @@ const NavLinks = styled.div`
 const NavMenu = ({ isOpen }) => {
   return (
     <NavMenuWrapper isOpen={isOpen}>
-      <NavLinks>
-      <Link>Book Now</Link>
-      <NavDivider />
-      <Link>Services</Link>
-      <NavDivider />
-      <Link>About Me</Link>
+      <NavLinks isOpen={isOpen}>
+        <Link to="/book">Book Now</Link>
+        <NavDivider />
+        <Link to="/services">Services</Link>
+        <NavDivider />
+        <Link to="/about">About Me</Link>
       </NavLinks>
       
     </NavMenuWrapper>
