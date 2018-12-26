@@ -1,33 +1,58 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import { Link } from 'gatsby'
-import styled from 'styled-components';
-import Crown from '../images/WBco.logo.crown.svg';
-import Hamburger from '../images/Hamburger.svg';
-import { border, color } from '../utilities/styles';
+import styled from 'styled-components'
+import Crown from '../images/WBco.logo.crown.svg'
+import Hamburger from '../images/Hamburger.svg'
+import { border, color } from '../utilities/styles'
 
 const HeaderContainer = styled.header`
   border-bottom: 1px solid ${border.color};
-  margin: 0 .4rem;
-  padding: 1.5rem 1rem;
+  padding: 1.5rem 0;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  position: relative;
+  position: fixed;
+  top: 0;
+  width: 100vw;
+  background: ${color.white};
+
+  & > *:first-child {
+    margin-left: 1rem;
+  }
+
+  & > *:last-child {
+    margin-right: 1rem;
+  }
+
+  ${({ navIsOpen }) => {
+    return (
+      navIsOpen &&
+      `
+        background: ${color.grey.main};
+        position: fixed;
+        width: 100vw;
+        top: 0;
+        z-index: 999;
+    `
+    )
+  }}
 
   a {
     text-decoration: none;
-    
+
     &:link,
     &:visited,
     &:hover,
     &:active {
       color: ${color.black};
     }
-    transition: all .2s;
+    transition: all 0.2s;
 
     ${({ navIsOpen }) => {
-      return navIsOpen && `
+      return (
+        navIsOpen &&
+        `
         color: #fff;
 
         &:link,
@@ -36,37 +61,39 @@ const HeaderContainer = styled.header`
         &:active {
           color: ${color.white};
         }
-    `;
+    `
+      )
     }}
   }
 
   svg:first-child {
-    transition: all .5s;
-    fill: ${({ navIsOpen}) => navIsOpen ? color.white : color.black};
-    
+    transition: all 0.5s;
+    fill: ${({ navIsOpen }) => (navIsOpen ? color.white : color.black)};
   }
 
   & > * {
     z-index: 100;
-  } 
-`;
+  }
+`
 
 const HamburgerWrapper = styled.button`
   margin-right: 1rem;
   border: none;
   background: none;
-  
+
   svg {
     fill: ${color.black};
   }
-  
+
   path {
-    transition: transform .3s;
+    transition: transform 0.3s;
     transform: rotate(0) translate(0, 0) scaleX(1);
   }
 
   ${({ navIsOpen }) => {
-    return navIsOpen && `
+    return (
+      navIsOpen &&
+      `
       fill: ${color.white};
 
       path:nth-child(1) {
@@ -80,14 +107,14 @@ const HamburgerWrapper = styled.button`
       path:nth-child(3) {
         transform: rotate(-45deg) translate(-12px, 2px);
       }
-    `;
+    `
+    )
   }}
-  
-`;
+`
 
 const TitleContainer = styled.div`
   font-size: 1.8rem;
-  font-weight: ${({ navIsOpen }) => navIsOpen ? '300' : '600'};
+  font-weight: ${({ navIsOpen }) => (navIsOpen ? '300' : '600')};
   text-transform: uppercase;
   text-decoration: none;
   letter-spacing: 2px;
@@ -100,26 +127,20 @@ const TitleContainer = styled.div`
   & > *:last-child {
     font-size: 1.5rem;
   }
-`;
+`
 
 const Header = ({ onMenuToggle, navIsOpen }) => {
   return (
     <HeaderContainer navIsOpen={navIsOpen}>
-      <Crown style={{ height: '4.5rem' }}/>
-      
+      <Crown style={{ height: '4.5rem' }} />
+
       <TitleContainer navIsOpen={navIsOpen}>
-        <Link
-          to="/"
-        >
-          <div>
-            woodward
-          </div>
-          <div>
-            bicycle co.
-          </div>
+        <Link to="/">
+          <div>woodward</div>
+          <div>bicycle co.</div>
         </Link>
       </TitleContainer>
-        
+
       <HamburgerWrapper
         navIsOpen={navIsOpen}
         onClick={onMenuToggle}
@@ -127,10 +148,9 @@ const Header = ({ onMenuToggle, navIsOpen }) => {
       >
         <Hamburger />
       </HamburgerWrapper>
-
     </HeaderContainer>
-  );
-};
+  )
+}
 
 Header.defaultProps = {
   siteTitle: '',

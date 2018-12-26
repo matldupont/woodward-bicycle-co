@@ -1,15 +1,15 @@
-import { css } from 'styled-components';
+import { css } from 'styled-components'
 
 export const border = {
   color: '#E2E3DF',
   radius: '2px',
-  
-};
+}
 
 export const color = {
   white: '#FFFFFF',
   gold: '#EBC85B',
   grey: {
+    extraLight: '#DDD',
     light: '#787878',
     main: '#454545',
     transparent: '#454545BB',
@@ -19,7 +19,7 @@ export const color = {
     dark: '#475b66',
   },
   black: '#000000',
-};
+}
 
 export const screen = {
   small: '600px',
@@ -28,7 +28,7 @@ export const screen = {
   mediumUp: '901px',
   large: '1200px',
   largeUp: '1201px',
-};
+}
 
 export const media = {
   smallAndDown: (...args) => css`
@@ -37,7 +37,7 @@ export const media = {
     }
   `,
   mediumOnly: (...args) => css`
-    @media only screen and (min-width : ${screen.smallUp}) and (max-width : ${screen.medium}) {
+    @media only screen and (min-width: ${screen.smallUp}) and (max-width: ${screen.medium}) {
       ${css(...args)};
     }
   `,
@@ -61,4 +61,4 @@ export const media = {
       ${css(...args)};
     }
   `,
-};
+}

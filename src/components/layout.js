@@ -2,12 +2,12 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import Helmet from 'react-helmet'
 import { StaticQuery, graphql } from 'gatsby'
-import { createGlobalStyle } from 'styled-components';
+import { createGlobalStyle } from 'styled-components'
 
 import NavMenu from './NavMenu'
 import Header from './header'
+import { Container } from './Page'
 // import './layout.css'
-
 
 const GlobalStyle = createGlobalStyle`
   @import url('https://fonts.googleapis.com/css?family=Montserrat:300,500,600|Raleway:300,400,500,600');
@@ -28,6 +28,11 @@ const GlobalStyle = createGlobalStyle`
   h1, h2, h3, h4, h5, h6 {
     font-family: Montserrat;
   }
+  
+  * {
+    padding: 0;
+    margin: 0;
+  }
 `
 
 // const StyledOverlay = styled.div`
@@ -41,14 +46,13 @@ const GlobalStyle = createGlobalStyle`
 //   background-color: rgba(0,0,0, .5);
 // `;
 
-
 class Layout extends React.Component {
   state = {
     navOpen: false,
-  };
+  }
 
   toggleMenu = () => {
-    this.setState(({ navOpen}) => {
+    this.setState(({ navOpen }) => {
       return {
         ...this.state,
         navOpen: !navOpen,
@@ -57,8 +61,8 @@ class Layout extends React.Component {
   }
 
   render() {
-    const { children } = this.props;
-    const { navOpen } = this.state;
+    const { children } = this.props
+    const { navOpen } = this.state
     return (
       <StaticQuery
         query={graphql`
@@ -81,20 +85,19 @@ class Layout extends React.Component {
             >
               <html lang="en" />
             </Helmet>
-            <NavMenu isOpen={navOpen} />
+
             <Header
               navIsOpen={navOpen}
               onMenuToggle={this.toggleMenu}
-              siteTitle={data.site.siteMetadata.title} 
+              siteTitle={data.site.siteMetadata.title}
             />
+            <NavMenu isOpen={navOpen} />
             <GlobalStyle />
-            <div>
-              {children}
-            </div>
+            <Container>{children}</Container>
           </>
         )}
       />
-    );
+    )
   }
 }
 
