@@ -16,6 +16,7 @@ const HeaderContainer = styled.header`
   top: 0;
   width: 100vw;
   background: ${color.white};
+  z-index: 999;
 
   & > *:first-child {
     margin-left: 1rem;
