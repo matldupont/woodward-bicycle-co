@@ -16,6 +16,14 @@ const HeaderContainer = styled.header`
   top: 0;
   width: 100vw;
   background: ${color.white};
+  ${({ dark }) => {
+    return (
+      dark &&
+      `
+      background: ${color.black.alt};
+    `
+    )
+  }}
   z-index: 999;
 
   & > *:first-child {
@@ -26,9 +34,9 @@ const HeaderContainer = styled.header`
     margin-right: 1rem;
   }
 
-  ${({ navIsOpen }) => {
+  ${({ open }) => {
     return (
-      navIsOpen &&
+      open &&
       `
         background: ${color.grey.main};
         position: fixed;
@@ -38,39 +46,6 @@ const HeaderContainer = styled.header`
     `
     )
   }}
-
-  a {
-    text-decoration: none;
-
-    &:link,
-    &:visited,
-    &:hover,
-    &:active {
-      color: ${color.black};
-    }
-    transition: all 0.2s;
-
-    ${({ navIsOpen }) => {
-      return (
-        navIsOpen &&
-        `
-        color: #fff;
-
-        &:link,
-        &:visited,
-        &:hover,
-        &:active {
-          color: ${color.white};
-        }
-    `
-      )
-    }}
-  }
-
-  svg:first-child {
-    transition: all 0.5s;
-    fill: ${({ navIsOpen }) => (navIsOpen ? color.white : color.black)};
-  }
 
   & > * {
     z-index: 100;
@@ -83,7 +58,11 @@ const HamburgerWrapper = styled.button`
   background: none;
 
   svg {
-    fill: ${color.black};
+    transition: all 0.2s;
+    fill: ${({ dark, open }) => {
+      if (dark || open) return color.white
+      return color.black.main
+    }};
   }
 
   path {
@@ -91,11 +70,13 @@ const HamburgerWrapper = styled.button`
     transform: rotate(0) translate(0, 0) scaleX(1);
   }
 
-  ${({ navIsOpen }) => {
+  ${({ open }) => {
     return (
-      navIsOpen &&
+      open &&
       `
-      fill: ${color.white};
+      svg {
+        fill: ${color.white};
+      }
 
       path:nth-child(1) {
         transform: rotate(45deg) translate(4px,-8px);
@@ -113,9 +94,29 @@ const HamburgerWrapper = styled.button`
   }}
 `
 
+const CrownWrapper = styled.span`
+  svg {
+    fill: ${({ open, dark }) => {
+      if (dark || open) return color.white
+
+      return color.black.main
+    }};
+  }
+`
+
+const CrownIcon = styled(Crown)`
+  height: 4.5rem;
+  transition: all 0.5s;
+  fill: ${({ open, dark }) => {
+    if (dark || open) return color.white
+
+    return color.black.main
+  }};
+`
+
 const TitleContainer = styled.div`
   font-size: 1.8rem;
-  font-weight: ${({ navIsOpen }) => (navIsOpen ? '300' : '600')};
+  font-weight: 600;
   text-transform: uppercase;
   text-decoration: none;
   letter-spacing: 2px;
@@ -128,14 +129,56 @@ const TitleContainer = styled.div`
   & > *:last-child {
     font-size: 1.5rem;
   }
+
+  a {
+    text-decoration: none;
+
+    &:link,
+    &:visited,
+    &:hover,
+    &:active {
+      color: ${color.black.main};
+
+      ${({ dark }) => {
+        return (
+          dark &&
+          `
+            color: ${color.white};
+            font-weight: 300;
+          `
+        )
+      }};
+    }
+    transition: all 0.2s;
+
+    ${({ open, dark }) => {
+      return (
+        (open || dark) &&
+        `
+        color: #fff;
+        font-weight: 300;
+  
+
+        &:link,
+        &:visited,
+        &:hover,
+        &:active {
+          color: ${color.white};
+        }
+    `
+      )
+    }}
+  }
 `
 
-const Header = ({ onMenuToggle, navIsOpen }) => {
+const Header = ({ onMenuToggle, isOpen, dark }) => {
   return (
-    <HeaderContainer navIsOpen={navIsOpen}>
-      <Crown style={{ height: '4.5rem' }} />
+    <HeaderContainer dark={dark} open={isOpen}>
+      <CrownWrapper dark={dark} open={isOpen}>
+        <CrownIcon />
+      </CrownWrapper>
 
-      <TitleContainer navIsOpen={navIsOpen}>
+      <TitleContainer dark={dark} open={isOpen}>
         <Link to="/">
           <div>woodward</div>
           <div>bicycle co.</div>
@@ -143,7 +186,8 @@ const Header = ({ onMenuToggle, navIsOpen }) => {
       </TitleContainer>
 
       <HamburgerWrapper
-        navIsOpen={navIsOpen}
+        dark={dark}
+        open={isOpen}
         onClick={onMenuToggle}
         aria-label="open menu"
       >
@@ -156,13 +200,15 @@ const Header = ({ onMenuToggle, navIsOpen }) => {
 Header.defaultProps = {
   siteTitle: '',
   onMenuToggle: () => {},
-  navIsOpen: false,
+  isOpen: false,
+  dark: false,
 }
 
 Header.propTypes = {
   siteTitle: PropTypes.string,
   onMenuToggle: PropTypes.func,
-  navIsOpen: PropTypes.bool,
+  isOpen: PropTypes.bool,
+  dark: PropTypes.bool,
 }
 
 export default Header

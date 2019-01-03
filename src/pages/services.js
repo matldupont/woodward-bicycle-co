@@ -37,7 +37,7 @@ const TheTuneDescription = styled.p`
 
 const TheTuneLink = styled(Link)`
   align-self: flex-end;
-  color: ${color.black};
+  color: ${color.black.main};
   font-size: 1.8rem;
   font-style: italic;
 `

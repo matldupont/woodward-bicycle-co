@@ -18,7 +18,10 @@ export const color = {
     main: '#B6C4CC',
     dark: '#475b66',
   },
-  black: '#000000',
+  black: {
+    main: '#000000',
+    alt: '#222',
+  },
 }
 
 export const screen = {

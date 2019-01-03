@@ -24,6 +24,14 @@ const GlobalStyle = createGlobalStyle`
     padding: 0;
     margin: 0;
     font-family: Raleway, sans-serif;
+    min-height: 100vh;
+    display: flex;
+    justify-content: stretch;
+    align-items: stretch;
+
+    & > * {
+      flex: 1;
+    }
   }
   h1, h2, h3, h4, h5, h6 {
     font-family: Montserrat;
@@ -61,7 +69,7 @@ class Layout extends React.Component {
   }
 
   render() {
-    const { children } = this.props
+    const { children, dark } = this.props
     const { navOpen } = this.state
     return (
       <StaticQuery
@@ -87,7 +95,8 @@ class Layout extends React.Component {
             </Helmet>
 
             <Header
-              navIsOpen={navOpen}
+              dark={dark}
+              isOpen={navOpen}
               onMenuToggle={this.toggleMenu}
               siteTitle={data.site.siteMetadata.title}
             />
@@ -101,8 +110,13 @@ class Layout extends React.Component {
   }
 }
 
+Layout.defaultProps = {
+  dark: false,
+}
+
 Layout.propTypes = {
   children: PropTypes.node.isRequired,
+  dark: PropTypes.bool,
 }
 
 export default Layout
