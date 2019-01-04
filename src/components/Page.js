@@ -2,6 +2,7 @@ import styled from 'styled-components'
 
 export const Container = styled.div`
   margin-top: 7rem;
+  min-height: calc(100vh - 7rem);
 `
 
 export const Wrapper = styled.div`

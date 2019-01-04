@@ -1,5 +1,5 @@
 import React from 'react'
-// import { Link } from 'gatsby'
+import { navigate } from 'gatsby'
 import styled from 'styled-components'
 
 import Layout from '../components/layout'
@@ -175,43 +175,50 @@ const TheTuneButtonText = styled.div`
   margin-top: -1rem;
 `
 
-const IndexPage = () => (
-  <Layout>
-    <Main>
-      <Banner>
-        <ImageContainer>
-          <MainImage />
-        </ImageContainer>
-        <TextContainer>
-          <Quote>
-            <div>You love your bike.</div>
-            <div>So do I.</div>
-          </Quote>
-          <Author>~ Lukasz Dybinski</Author>
-        </TextContainer>
-      </Banner>
-    </Main>
-    <TheTuneSection>
-      <TheTuneText>
-        <LeadingCapital>W</LeadingCapital>elcome, Woodward Bicycle Co is a
-        repair and build studio in Carlington, Ottawa. All repairs are by
-        appointment in order to give you our undivided attention and all starts
-        with…
-      </TheTuneText>
-      <TheTuneContainer>
-        <TheTuneImage />
-        <TheTuneTitle>the tune</TheTuneTitle>
-        <TheTunePrice>$145</TheTunePrice>
-        <TheTuneButton>
-          <TheTuneButtonRing>
-            <TheTuneButtonInside>
-              <TheTuneButtonText>Details</TheTuneButtonText>
-            </TheTuneButtonInside>
-          </TheTuneButtonRing>
-        </TheTuneButton>
-      </TheTuneContainer>
-    </TheTuneSection>
-  </Layout>
-)
+const IndexPage = () => {
+  const handleTuneClick = event => {
+    event.preventDefault()
+
+    navigate('/thetune')
+  }
+  return (
+    <Layout>
+      <Main>
+        <Banner>
+          <ImageContainer>
+            <MainImage />
+          </ImageContainer>
+          <TextContainer>
+            <Quote>
+              <div>You love your bike.</div>
+              <div>So do I.</div>
+            </Quote>
+            <Author>~ Lukasz Dybinski</Author>
+          </TextContainer>
+        </Banner>
+      </Main>
+      <TheTuneSection>
+        <TheTuneText>
+          <LeadingCapital>W</LeadingCapital>elcome, Woodward Bicycle Co is a
+          repair and build studio in Carlington, Ottawa. All repairs are by
+          appointment in order to give you our undivided attention and all
+          starts with…
+        </TheTuneText>
+        <TheTuneContainer>
+          <TheTuneImage />
+          <TheTuneTitle>the tune</TheTuneTitle>
+          <TheTunePrice>$145</TheTunePrice>
+          <TheTuneButton type="button" onClick={handleTuneClick}>
+            <TheTuneButtonRing>
+              <TheTuneButtonInside>
+                <TheTuneButtonText>Details</TheTuneButtonText>
+              </TheTuneButtonInside>
+            </TheTuneButtonRing>
+          </TheTuneButton>
+        </TheTuneContainer>
+      </TheTuneSection>
+    </Layout>
+  )
+}
 
 export default IndexPage
