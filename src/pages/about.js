@@ -7,7 +7,6 @@ import MainImage from '../components/MainImage'
 const AboutParagraph = styled.p`
   font-size: 1.6rem;
   line-height: 2.4rem;
-  margin: 0 1rem;
 
   &:not(:last-child) {
     margin-bottom: 5rem;
