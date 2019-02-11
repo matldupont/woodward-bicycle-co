@@ -14,6 +14,7 @@ const Main = styled.main`
   flex-direction: column;
   align-items: center;
   padding: 0.8rem;
+  align-self: stretch;
 `
 
 const Banner = styled.div`

@@ -8,6 +8,10 @@ import { Wrapper, Heading } from '../components/Page'
 
 import { color } from '../utilities/styles'
 
+const PageWrapper = styled(Wrapper)`
+  max-width: 70rem;
+`
+
 const ServiceSection = styled.section`
   display: flex;
   flex-direction: column;
@@ -140,7 +144,7 @@ const serviceList = {
 const ServicesPage = () => {
   return (
     <Layout>
-      <Wrapper>
+      <PageWrapper>
         <Heading>services</Heading>
         <ServiceSection>
           <TheTuneHeading>
@@ -175,7 +179,7 @@ const ServicesPage = () => {
             </ServiceSection>
           )
         })}
-      </Wrapper>
+      </PageWrapper>
     </Layout>
   )
 }
