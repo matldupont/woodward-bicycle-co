@@ -4,6 +4,10 @@ import Layout from '../components/layout'
 import { Wrapper, Heading } from '../components/Page'
 import MainImage from '../components/MainImage'
 
+const AboutWrapper = styled(Wrapper)`
+  max-width: 70rem;
+`
+
 const AboutParagraph = styled.p`
   font-size: 1.6rem;
   line-height: 2.4rem;
@@ -28,12 +32,17 @@ const BannerImageWrapper = styled.figure`
   height: 10rem;
   overflow: hidden;
   margin: 3rem 0;
+  width: 100%;
+
+  div {
+    transform: translateY(-40%);
+  }
 `
 
 const AboutPage = () => {
   return (
     <Layout>
-      <Wrapper>
+      <AboutWrapper>
         <Heading>Why WBco?</Heading>
         <AboutParagraph>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. In a erat
@@ -59,12 +68,12 @@ const AboutPage = () => {
           bibendum, felis quis ullamcorper porttitor, lacus sem rhoncus felis,
           sit amet lobortis elit leo laoreet ligula.
         </AboutParagraph>
-      </Wrapper>
+      </AboutWrapper>
 
       <BannerImageWrapper>
         <MainImage />
       </BannerImageWrapper>
-      <Wrapper>
+      <AboutWrapper>
         <AboutParagraph>
           Pellentesque a ante vel magna consectetur maximus. Nulla suscipit sem
           felis, vitae auctor ligula lobortis a. Etiam elit sem, dapibus sed
@@ -87,7 +96,7 @@ const AboutPage = () => {
           gravida ac. Aliquam erat volutpat. Interdum et malesuada fames ac.
         </AboutParagraph>
         <MainImage />
-      </Wrapper>
+      </AboutWrapper>
     </Layout>
   )
 }

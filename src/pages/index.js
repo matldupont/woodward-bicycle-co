@@ -106,8 +106,8 @@ const TheTuneContainer = styled.div`
   box-shadow: 0 0px 70px 3px rgba(0, 0, 0, 0.2);
   margin-bottom: 30rem;
   position: relative;
-  height: 37rem;
-  width: 37rem;
+  width: 100%;
+  max-width: 37rem;
 `
 
 const TheTuneOverlayText = styled.div`
@@ -120,20 +120,20 @@ const TheTuneOverlayText = styled.div`
 `
 
 const TheTuneTitle = styled(TheTuneOverlayText)`
-  top: 6rem;
-  left: 3rem;
-  font-size: 5rem;
+  top: 2rem;
+  left: 1rem;
+  font-size: 4rem;
 `
 
 const TheTunePrice = styled(TheTuneOverlayText)`
-  top: 12.5rem;
-  left: 5rem;
-  font-size: 4rem;
+  top: 8rem;
+  left: 13rem;
+  font-size: 3rem;
 `
 
 const TheTuneButton = styled.button`
   position: absolute;
-  bottom: 1rem;
+  bottom: 4rem;
   right: 1rem;
   height: 13rem;
   width: 13rem;
