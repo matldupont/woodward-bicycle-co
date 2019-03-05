@@ -36,6 +36,7 @@ paragraph4: >
   purus, nec ultricies augue gravida ac. Aliquam erat volutpat. Interdum et
   malesuada fames ac.
 roundImage: /img/main.jpg
-bannerImage: /img/thetune.jpg
+bannerImage: /img/wbco.bike.jpg
 fullImage: /img/main.jpg
 ---
+
