@@ -2,7 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { AboutPageTemplate } from '../../templates/about-page'
 
-const AboutPagePreview = ({ entry }) => {
+const AboutPagePreview = ({ entry, getAsset }) => {
   // const entryBlurbs = entry.getIn(['data', 'intro', 'blurbs'])
   // const blurbs = entryBlurbs ? entryBlurbs.toJS() : []
 
@@ -19,9 +19,9 @@ const AboutPagePreview = ({ entry }) => {
       paragraph2={entry.getIn(['data', 'paragraph2'])}
       paragraph3={entry.getIn(['data', 'paragraph3'])}
       paragraph4={entry.getIn(['data', 'paragraph4'])}
-      roundImage={entry.getIn(['data', 'roundImage'])}
-      bannerImage={entry.getIn(['data', 'bannerImage'])}
-      fullImage={entry.getIn(['data', 'fullImage'])}
+      roundImage={getAsset(entry.getIn(['data', 'roundImage']))}
+      bannerImage={getAsset(entry.getIn(['data', 'bannerImage']))}
+      fullImage={getAsset(entry.getIn(['data', 'fullImage']))}
     />
   )
 }
