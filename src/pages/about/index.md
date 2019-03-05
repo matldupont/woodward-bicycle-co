@@ -35,10 +35,7 @@ paragraph4: >
   eros fermentum, commodo tellus id, accumsan sapien. Aliquam consectetur varius
   purus, nec ultricies augue gravida ac. Aliquam erat volutpat. Interdum et
   malesuada fames ac.
-roundImage: >-
-  https://raw.githubusercontent.com/matldupont/woodward-bicycle-co/master/static/img/main.jpg
-bannerImage: >-
-  https://raw.githubusercontent.com/matldupont/woodward-bicycle-co/master/static/img/thetune.jpg
-fullImage: /images/main.jpg
+roundImage: /img/main.jpg
+bannerImage: /img/thetune.jpg
+fullImage: /img/main.jpg
 ---
-
