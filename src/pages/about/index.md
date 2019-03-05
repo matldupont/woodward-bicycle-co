@@ -37,7 +37,8 @@ paragraph4: >
   malesuada fames ac.
 roundImage: >-
   https://raw.githubusercontent.com/matldupont/woodward-bicycle-co/master/static/img/main.jpg
-bannerImage: /images/main.jpg
+bannerImage: >-
+  https://raw.githubusercontent.com/matldupont/woodward-bicycle-co/master/static/img/thetune.jpg
 fullImage: /images/main.jpg
 ---
 
