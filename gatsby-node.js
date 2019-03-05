@@ -29,10 +29,8 @@ exports.createPages = ({ actions, graphql }) => {
     }
 
     const pages = result.data.allMarkdownRemark.edges
-    console.log('Pages =>', pages)
     pages.forEach(edge => {
       const id = edge.node.id
-      console.log('templatekey => ', edge.node.frontmatter.templateKey)
       createPage({
         path: edge.node.fields.slug,
         component: path.resolve(

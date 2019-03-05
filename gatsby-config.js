@@ -76,5 +76,6 @@ module.exports = {
         icon: 'src/images/WBco-logo.jpg', // This path is relative to the root of the site.
       },
     },
+    'gatsby-plugin-netlify-cms',
   ],
 }
