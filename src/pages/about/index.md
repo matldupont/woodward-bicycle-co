@@ -8,16 +8,15 @@ paragraph1: >-
   Nunc maximus risus id ex hendrerit, eget rhoncus nisl facilisis. Sed ornare
   ligula eu eros suscipit, vitae ultrices arcu accumsan. Etiam enim elit,
   volutpat non laoreet ut, vestibulum nec orci.
-paragraph2: >
-  Phasellus bibendum, arcu ac pharetra dignissim, sapien neque facilisis libero,
-  et vestibulum mi ipsum at mi. Sed ultricies eu massa in lacinia. Maecenas
-  placerat felis a interdum aliquam. Mauris accumsan arcu sapien, vel mollis
-  enim vehicula non. Fusce tempus vulputate nisl, quis rhoncus sapien
-  sollicitudin vel. Donec metus elit, ullamcorper quis lorem in, finibus blandit
-  nunc. Curabitur rutrum egestas tempor. Sed orci sapien, suscipit at elit quis,
-  tempus vestibulum mauris. Mauris non faucibus tortor, a hendrerit odio. Ut
-  bibendum, felis quis ullamcorper porttitor, lacus sem rhoncus felis, sit amet
-  lobortis elit leo laoreet ligula.
+paragraph2: >-
+  Hey I'm showing this to Michael  fet vestibulum mi ipsum at mi. Sed ultricies
+  eu massa in lacinia. Maecenas placerat felis a interdum aliquam. Mauris
+  accumsan arcu sapien, vel mollis enim vehicula non. Fusce tempus vulputate
+  nisl, quis rhoncus sapien sollicitudin vel. Donec metus elit, ullamcorper quis
+  lorem in, finibus blandit nunc. Curabitur rutrum egestas tempor. Sed orci
+  sapien, suscipit at elit quis, tempus vestibulum mauris. Mauris non faucibus
+  tortor, a hendrerit odio. Ut bibendum, felis quis ullamcorper porttitor, lacus
+  sem rhoncus felis, sit amet lobortis elit leo laoreet ligula.
 paragraph3: >
   Pellentesque a ante vel magna consectetur maximus. Nulla suscipit sem felis,
   vitae auctor ligula lobortis a. Etiam elit sem, dapibus sed sapien id,
@@ -35,7 +34,7 @@ paragraph4: >
   eros fermentum, commodo tellus id, accumsan sapien. Aliquam consectetur varius
   purus, nec ultricies augue gravida ac. Aliquam erat volutpat. Interdum et
   malesuada fames ac.
-roundImage: /img/main.jpg
+roundImage: /img/wbco-lukasz-1.jpg
 bannerImage: /img/wbco.bike.jpg
 fullImage: /img/wbco-gears.jpg
 ---
