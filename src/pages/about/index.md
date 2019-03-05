@@ -2,12 +2,12 @@
 templateKey: about-page
 title: About Woodward Bicycle Co.
 heading: Why WBCo?
-paragraph1: >
-  Lorem ipsum dolor sit amet, consectetur adipiscing elit. In a erat pharetra,
-  egestas augue ac, venenatis nibh. Morbi aliquam mollis imperdiet. Nunc maximus
-  risus id ex hendrerit, eget rhoncus nisl facilisis. Sed ornare ligula eu eros
-  suscipit, vitae ultrices arcu accumsan. Etiam enim elit, volutpat non laoreet
-  ut, vestibulum nec orci.
+paragraph1: >-
+  Testing this content change amet, consectetur adipiscing elit. In a erat
+  pharetra, egestas augue ac, venenatis nibh. Morbi aliquam mollis imperdiet.
+  Nunc maximus risus id ex hendrerit, eget rhoncus nisl facilisis. Sed ornare
+  ligula eu eros suscipit, vitae ultrices arcu accumsan. Etiam enim elit,
+  volutpat non laoreet ut, vestibulum nec orci.
 paragraph2: >
   Phasellus bibendum, arcu ac pharetra dignissim, sapien neque facilisis libero,
   et vestibulum mi ipsum at mi. Sed ultricies eu massa in lacinia. Maecenas
@@ -37,6 +37,6 @@ paragraph4: >
   malesuada fames ac.
 roundImage: /img/main.jpg
 bannerImage: /img/wbco.bike.jpg
-fullImage: /img/main.jpg
+fullImage: /img/wbco-gears.jpg
 ---
 
