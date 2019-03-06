@@ -11,7 +11,7 @@ mainPackage:
 serviceCategories:
   - title: the top-ups
     services:
-      - service: Brake cables and housing
+      - service: Brake cables and stuffs
         price: $25
       - service: Gear cables and housing
         price: $25

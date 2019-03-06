@@ -10,6 +10,7 @@ import { color } from '../utilities/styles'
 
 const PageWrapper = styled(Wrapper)`
   max-width: 70rem;
+  align-self: center;
 `
 
 const ServiceSection = styled.section`

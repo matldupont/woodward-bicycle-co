@@ -5,9 +5,11 @@ import styled from 'styled-components'
 import Layout from '../components/layout'
 import { Wrapper, Heading } from '../components/Page'
 import TracedImage from '../components/TracedImage'
+import { media } from '../utilities/styles'
 
 const AboutWrapper = styled(Wrapper)`
   max-width: 70rem;
+  align-self: center;
 `
 
 const AboutParagraph = styled.p`
@@ -39,6 +41,14 @@ const BannerImageWrapper = styled.figure`
   div {
     transform: translateY(-40%);
   }
+
+  ${media.mediumAndUp`
+    height: 20rem;
+  `};
+
+  ${media.largeAndUp`
+    height: 30rem;
+  `}
 `
 
 const AboutPageTemplate = ({
@@ -140,21 +150,21 @@ export const aboutPageQuery = graphql`
         roundImage {
           childImageSharp {
             fluid(maxWidth: 2048, quality: 100) {
-              ...GatsbyImageSharpFluid
+              ...GatsbyImageSharpFluid_tracedSVG
             }
           }
         }
         bannerImage {
           childImageSharp {
             fluid(maxWidth: 2048, quality: 100) {
-              ...GatsbyImageSharpFluid
+              ...GatsbyImageSharpFluid_tracedSVG
             }
           }
         }
         fullImage {
           childImageSharp {
             fluid(maxWidth: 2048, quality: 100) {
-              ...GatsbyImageSharpFluid
+              ...GatsbyImageSharpFluid_tracedSVG
             }
           }
         }
