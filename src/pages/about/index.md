@@ -16,7 +16,7 @@ paragraph3: >-
   don't see an appointment time that works for you, give me a shout and we'll
   find one.
 paragraph4: 'Dang! '
-roundImage: /img/wbco-lukasz-1.jpg
+roundImage: /img/51357e93-3b41-49c8-b204-b2e6ec32de75.jpeg
 bannerImage: /img/wbco.instagram.4.jpg
 fullImage: /img/wbco-gears.jpg
 ---
