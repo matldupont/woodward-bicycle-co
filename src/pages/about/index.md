@@ -3,7 +3,7 @@ templateKey: about-page
 title: About Woodward Bicycle Co.
 heading: Why WBCo?
 paragraph1: >-
-  Testing this content change amet, consectetur adipiscing elit. In a erat
+  TBecause I'm showing Lukasz amet, consectetur adipiscing elit. In a erat
   pharetra, egestas augue ac, venenatis nibh. Morbi aliquam mollis imperdiet.
   Nunc maximus risus id ex hendrerit, eget rhoncus nisl facilisis. Sed ornare
   ligula eu eros suscipit, vitae ultrices arcu accumsan. Etiam enim elit,
@@ -35,7 +35,7 @@ paragraph4: >
   purus, nec ultricies augue gravida ac. Aliquam erat volutpat. Interdum et
   malesuada fames ac.
 roundImage: /img/wbco-lukasz-1.jpg
-bannerImage: /img/wbco.bike.jpg
+bannerImage: /img/wbco.instagram.4.jpg
 fullImage: /img/wbco-gears.jpg
 ---
 
