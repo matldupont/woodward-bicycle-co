@@ -16,8 +16,8 @@ paragraph3: >-
   don't see an appointment time that works for you, give me a shout and we'll
   find one.
 paragraph4: 'Dang! '
-roundImage: /img/51357e93-3b41-49c8-b204-b2e6ec32de75.jpeg
-bannerImage: /img/wbco.instagram.4.jpg
-fullImage: /img/wbco-gears.jpg
+roundImage: /img/b3aad8ba-9583-4ef1-b4cc-7e834e9ae511.png
+bannerImage: /img/4dd51135-bad7-4aab-8aff-abc95f4516cc.jpeg
+fullImage: /img/f4373817-ce37-42bd-8340-9efa4223eea8.jpeg
 ---
 
