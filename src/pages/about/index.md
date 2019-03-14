@@ -1,39 +1,21 @@
 ---
 templateKey: about-page
 title: About Woodward Bicycle Co.
-heading: Why WBCo?
+heading: 'Hi, I''m Lukasz Dybinski.'
 paragraph1: >-
-  TBecause I'm showing Lukasz amet, consectetur adipiscing elit. In a erat
-  pharetra, egestas augue ac, venenatis nibh. Morbi aliquam mollis imperdiet.
-  Nunc maximus risus id ex hendrerit, eget rhoncus nisl facilisis. Sed ornare
-  ligula eu eros suscipit, vitae ultrices arcu accumsan. Etiam enim elit,
-  volutpat non laoreet ut, vestibulum nec orci.
+  I worked as the Master Mechanic at MEC Ottawa for 6 years, before starting
+  Woodward Bicycle Co. in the summer of 2018. I'm passionate about bikes, and
+  launched WBco with the intention to transform the typical experience of
+  getting your bike serviced into a personal, fun, and efficient one.
 paragraph2: >-
-  Hey I'm showing this to Michael  fet vestibulum mi ipsum at mi. Sed ultricies
-  eu massa in lacinia. Maecenas placerat felis a interdum aliquam. Mauris
-  accumsan arcu sapien, vel mollis enim vehicula non. Fusce tempus vulputate
-  nisl, quis rhoncus sapien sollicitudin vel. Donec metus elit, ullamcorper quis
-  lorem in, finibus blandit nunc. Curabitur rutrum egestas tempor. Sed orci
-  sapien, suscipit at elit quis, tempus vestibulum mauris. Mauris non faucibus
-  tortor, a hendrerit odio. Ut bibendum, felis quis ullamcorper porttitor, lacus
-  sem rhoncus felis, sit amet lobortis elit leo laoreet ligula.
-paragraph3: >
-  Pellentesque a ante vel magna consectetur maximus. Nulla suscipit sem felis,
-  vitae auctor ligula lobortis a. Etiam elit sem, dapibus sed sapien id,
-  accumsan pretium nulla. Proin eget lacinia nibh. Fusce volutpat quis felis eu
-  feugiat. Aliquam erat volutpat. Curabitur scelerisque, risus sit amet semper
-  dictum, tortor nunc vulputate orci, quis ultricies orci ligula et purus. Etiam
-  sodales ullamcorper arcu eget vulputate. Donec arcu lorem, finibus ac tempus
-  et, cursus rhoncus risus. Curabitur tincidunt risus enim, et porttitor mauris
-  cursus quis. Aliquam erat volutpat.
-paragraph4: >
-  Phasellus nunc purus, pretium sed est a, pulvinar finibus ligula. Nullam id
-  accumsan dui, sed vestibulum sapien. Interdum et malesuada fames ac ante ipsum
-  primis in faucibus. Praesent aliquam sem metus, et maximus ipsum hendrerit
-  vehicula. Donec pellentesque est est, nec iaculis ante feugiat nec. Cras eu
-  eros fermentum, commodo tellus id, accumsan sapien. Aliquam consectetur varius
-  purus, nec ultricies augue gravida ac. Aliquam erat volutpat. Interdum et
-  malesuada fames ac.
+  I'm committed to service excellence, and to help people get outside, enjoy
+  their rides, and get excited about their bikes.
+paragraph3: >-
+  To ensure there is enough time to create this experience (and to avoid
+  lengthly wait times for you), I provide services by appointment only. If you
+  don't see an appointment time that works for you, give me a shout and we'll
+  find one.
+paragraph4: 'Dang! '
 roundImage: /img/wbco-lukasz-1.jpg
 bannerImage: /img/wbco.instagram.4.jpg
 fullImage: /img/wbco-gears.jpg
