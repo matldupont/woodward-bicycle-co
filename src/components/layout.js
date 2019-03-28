@@ -12,18 +12,20 @@ import { Container } from './Page'
 const GlobalStyle = createGlobalStyle`
   @import url('https://fonts.googleapis.com/css?family=Montserrat:300,500,600|Raleway:300,400,500,600');
 
-  html,body{
-    margin: 0;
-    padding: 0;
-  }
   html {
-    font-size: 62.5%;
+    box-sizing: border-box;
+    font-size: 10px;
+  }
+
+  *, *:before, *:after {
+    box-sizing: inherit;
   }
 
   body {
     padding: 0;
     margin: 0;
     font-family: Raleway, sans-serif;
+    font-size: 1.5rem;
     min-height: 100vh;
     display: flex;
     justify-content: stretch;
@@ -33,6 +35,12 @@ const GlobalStyle = createGlobalStyle`
       flex: 1;
     }
   }
+
+  a {
+    text-decoration: none;
+    color: #000;
+  }
+
   h1, h2, h3, h4, h5, h6 {
     font-family: Montserrat;
   }

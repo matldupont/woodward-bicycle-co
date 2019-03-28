@@ -34,8 +34,10 @@ paragraph4: >
   eros fermentum, commodo tellus id, accumsan sapien. Aliquam consectetur varius
   purus, nec ultricies augue gravida ac. Aliquam erat volutpat. Interdum et
   malesuada fames ac.
-roundImage: /img/wbco-lukasz-1.jpg
-bannerImage: /img/wbco.bike.jpg
-fullImage: /img/wbco-gears.jpg
+roundImage:
+  image: /img/wbco-lukasz-1.jpg
+bannerImage:
+  image: /img/wbco.bike.jpg
+fullImage:
+  image: /img/wbco-gears.jpg
 ---
-

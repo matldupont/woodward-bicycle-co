@@ -60,7 +60,6 @@ const TLDRParagraph = styled(TuneParagraph)`
 const TheTune = () => {
   const handleBackClick = event => {
     event.preventDefault()
-
     window.history.back()
   }
 
