@@ -1,9 +1,11 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 import styled from 'styled-components'
 import Layout from '../components/layout'
 import { Wrapper, Heading } from '../components/Page'
 
 import { color } from '../utilities/styles'
+import { navigate } from 'gatsby'
 
 const TuneContent = styled.div`
   max-width: 90rem;
@@ -57,10 +59,22 @@ const TLDRParagraph = styled(TuneParagraph)`
   padding: 4rem 0;
 `
 
-const TheTune = () => {
+const propTypes = {
+  location: PropTypes.shape({
+    state: PropTypes.shape({
+      srcUrl: PropTypes.string,
+    }),
+  }),
+}
+
+const TheTune = ({
+  location: {
+    state: { srcUrl },
+  },
+}) => {
   const handleBackClick = event => {
     event.preventDefault()
-    window.history.back()
+    navigate(srcUrl)
   }
 
   return (
@@ -130,5 +144,7 @@ const TheTune = () => {
     </Layout>
   )
 }
+
+TheTune.propTypes = propTypes
 
 export default TheTune

@@ -1,6 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import { navigate, graphql, Link } from 'gatsby'
+import { graphql, Link } from 'gatsby'
 import styled from 'styled-components'
 
 import Layout from '../components/layout'
@@ -131,7 +131,7 @@ const TheTunePrice = styled(TheTuneOverlayText)`
   font-size: 3rem;
 `
 
-const TheTuneButton = styled.button`
+const TheTuneButton = styled(Link)`
   position: absolute;
   bottom: 4rem;
   right: 1rem;
@@ -246,11 +246,11 @@ const PathLink = styled(Link)`
 `
 
 const IndexPageTemplate = ({ quote, mainText, mainImage, topPackage }) => {
-  const handleTuneClick = event => {
-    event.preventDefault()
+  // const handleTuneClick = event => {
+  //   event.preventDefault()
 
-    navigate('/thetune')
-  }
+  //   navigate('/thetune')
+  // }
 
   const getMainText = () => {
     return (
@@ -296,7 +296,7 @@ const IndexPageTemplate = ({ quote, mainText, mainImage, topPackage }) => {
           <TracedImage imageInfo={topPackage.packageImage} />
           <TheTuneTitle>{topPackage.title}</TheTuneTitle>
           <TheTunePrice>{topPackage.price}</TheTunePrice>
-          <TheTuneButton type="button" onClick={handleTuneClick}>
+          <TheTuneButton to="/thetune" state={{ srcUrl: '/' }}>
             <TheTuneButtonRing>
               <TheTuneButtonInside>
                 <TheTuneButtonText>Details</TheTuneButtonText>

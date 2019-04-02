@@ -118,7 +118,9 @@ const ServicesPageTemplate = ({ heading, mainPackage, serviceCategories }) => {
           <TheTunePrice>{` - ${price}`}</TheTunePrice>
         </TheTuneHeading>
         <TheTuneDescription>{description}</TheTuneDescription>
-        <TheTuneLink to={pageUrl}>details</TheTuneLink>
+        <TheTuneLink state={{ srcUrl: '/services' }} to={pageUrl}>
+          details
+        </TheTuneLink>
       </ServiceSection>
     )
   }
