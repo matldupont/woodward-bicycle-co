@@ -11,7 +11,7 @@ const NavMenuWrapper = styled.nav`
   width: 100vw;
   background: ${color.grey.main};
   z-index: 99;
-  transition: height 0.2s ease-in;
+  transition: height 0.4s ease-in;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -68,7 +68,6 @@ const NavLinks = styled.div`
   align-items: center;
   /* visibility: hidden; */
   /* opacity: 0; */
-  transition: all 0.3s ease 0.3s;
 
   ${({ isOpen }) => {
     return (

@@ -8,6 +8,7 @@ import { color } from '../utilities/styles'
 import { navigate } from 'gatsby'
 
 const TuneContent = styled.div`
+  margin-top: 3rem;
   max-width: 90rem;
   align-self: center;
 `

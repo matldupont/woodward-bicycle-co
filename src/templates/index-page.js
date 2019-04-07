@@ -76,8 +76,7 @@ const TheTuneSection = styled.section`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin: 8rem 0 0;
-  max-width: 100rem;
+  margin: 8rem 2rem;
 
   ${media.largeAndUp`
     flex-direction: row;
@@ -104,7 +103,6 @@ const LeadingCapital = styled.span`
 
 const TheTuneContainer = styled.div`
   box-shadow: 0 0px 70px 3px rgba(0, 0, 0, 0.2);
-  margin-bottom: 30rem;
   position: relative;
   width: 100%;
   max-width: 37rem;
@@ -145,6 +143,7 @@ const TheTuneButton = styled(Link)`
   box-shadow: 0px 5px 14px 0px hsla(0, 0%, 0%, 0.95);
   display: flex;
   justify-content: center;
+  align-items: center;
 `
 
 const TheTuneButtonRing = styled.div`
@@ -245,13 +244,108 @@ const PathLink = styled(Link)`
   transition: all 0.2s;
 `
 
+const TestimonialWrapper = styled.div`
+  display: flex;
+  justify-content: center;
+  margin: 4rem 2rem 8rem;
+`
+
+const TestimonialContent = styled.div`
+  padding: 0 3rem;
+  max-width: 100rem;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+
+  & > * {
+    max-width: 70rem;
+    padding: 4rem;
+    border-radius: 1px;
+  }
+
+  & > *:first-child {
+    align-self: flex-start;
+    border: 1px solid #333;
+  }
+
+  & > *:last-child {
+    margin-top: -2rem;
+    align-self: flex-end;
+    background-color: #333;
+    color: #eaeaea;
+  }
+`
+
+const Testimonial = styled.div`
+  display: flex;
+  flex-direction: column;
+  line-height: 1.5;
+`
+
+const TestimonialQuote = styled.div`
+  align-self: flex-start;
+`
+
+const TestimonialAuthor = styled.i`
+  align-self: flex-end;
+`
+
+const Location = styled.div`
+  align-self: stretch;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  margin: 8rem 2rem;
+
+  div {
+    text-align: center;
+
+    &:nth-child(1) {
+      font-size: 2.4rem;
+      margin: 2rem;
+    }
+
+    &:nth-child(2) {
+      font-style: italic;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-bottom: 2rem;
+
+      &::before,
+      &::after {
+        content: '';
+        height: 1px;
+        background-color: #333;
+        width: 4rem;
+        margin: 0 1rem;
+      }
+    }
+  }
+`
+
+const MapWrapper = styled.div`
+  display: flex;
+  justify-content: center;
+`
+
+const Map = styled.iframe`
+  align-self: stretch;
+  width: 
+  margin: 4rem 2rem;
+  max-width: 100rem;
+  height: 50rem;
+    flex: 1;
+`
+
+const Copyright = styled.div`
+  display: flex;
+  justify-content: center;
+  padding: 3rem;
+  font-size: 1.2rem;
+`
+
 const IndexPageTemplate = ({ quote, mainText, mainImage, topPackage }) => {
-  // const handleTuneClick = event => {
-  //   event.preventDefault()
-
-  //   navigate('/thetune')
-  // }
-
   const getMainText = () => {
     return (
       <React.Fragment>
@@ -280,16 +374,34 @@ const IndexPageTemplate = ({ quote, mainText, mainImage, topPackage }) => {
       <PathWrapper>
         <PathContentWrapper>
           <PathLinkWrapper>
-            <PathLink to="/">Fix My Bike</PathLink>
+            <PathLink to="/fix">Fix My Bike</PathLink>
             <ShortUnderline />
           </PathLinkWrapper>
           <Divider />
           <PathLinkWrapper>
-            <PathLink to="/">Build My Bike</PathLink>
+            <PathLink to="/build">Build My Bike</PathLink>
             <ShortUnderline />
           </PathLinkWrapper>
         </PathContentWrapper>
       </PathWrapper>
+      <TestimonialWrapper>
+        <TestimonialContent>
+          <Testimonial>
+            <TestimonialQuote>
+              {`"Great Service! Friendly, knowledgeable and passionate! Love your
+            bike? It will be in good hands at Woodward Bicycle Co."`}
+            </TestimonialQuote>
+            <TestimonialAuthor>- Kyle</TestimonialAuthor>
+          </Testimonial>
+          <Testimonial>
+            <TestimonialQuote>
+              {`"Fantastic Service. Super knowledgeable and very helpful. I trust
+            this guy with all my bikes, definitely my go-to guy for bikes!"`}
+            </TestimonialQuote>
+            <TestimonialAuthor>- Chris</TestimonialAuthor>
+          </Testimonial>
+        </TestimonialContent>
+      </TestimonialWrapper>
       <TheTuneSection>
         <TheTuneText>{getMainText()}</TheTuneText>
         <TheTuneContainer>
@@ -305,6 +417,22 @@ const IndexPageTemplate = ({ quote, mainText, mainImage, topPackage }) => {
           </TheTuneButton>
         </TheTuneContainer>
       </TheTuneSection>
+      <Location>
+        <div>Located near Carling/Kirkwood, Ottawa.</div>
+        <div>By appointment only</div>
+        <MapWrapper>
+          <Map
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7580.342177739016!2d-75.74240575547937!3d45.378867850299926!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4cce06973f5df719%3A0xa28e9f509836f068!2sWoodward+Ave%2C+Ottawa%2C+ON!5e0!3m2!1sen!2sca!4v1554603667239!5m2!1sen!2sca"
+            width="600"
+            height="450"
+            frameBorder="0"
+            allowFullscreen
+          />
+        </MapWrapper>
+      </Location>
+      <Copyright>
+        © Copyright 2019 Woodward Bicycle Co. All rights reserved.
+      </Copyright>
     </Layout>
   )
 }
