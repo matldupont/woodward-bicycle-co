@@ -331,11 +331,11 @@ const MapWrapper = styled.div`
 
 const Map = styled.iframe`
   align-self: stretch;
-  width: 
-  margin: 4rem 2rem;
+  width: 90%;
+  margin: 4rem 0;
   max-width: 100rem;
   height: 50rem;
-    flex: 1;
+  flex: 1;
 `
 
 const Copyright = styled.div`
