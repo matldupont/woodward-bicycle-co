@@ -70,7 +70,7 @@ const propTypes = {
 
 const TheTune = ({ location }) => {
   const handleBackClick = event => {
-    if (!location || !location.state || location.state.srcUrl) return
+    if (!location || !location.state || !location.state.srcUrl) return
     const {
       state: { srcUrl },
     } = location
