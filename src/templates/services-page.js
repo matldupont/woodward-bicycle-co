@@ -9,6 +9,7 @@ import { Wrapper, Heading } from '../components/Page'
 import { color } from '../utilities/styles'
 
 const PageWrapper = styled(Wrapper)`
+  margin-top: 8rem;
   max-width: 70rem;
   align-self: center;
 `
