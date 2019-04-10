@@ -422,6 +422,7 @@ const IndexPageTemplate = ({ quote, mainText, mainImage, topPackage }) => {
         <div>By appointment only</div>
         <MapWrapper>
           <Map
+            title="map to WBco"
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7580.342177739016!2d-75.74240575547937!3d45.378867850299926!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4cce06973f5df719%3A0xa28e9f509836f068!2sWoodward+Ave%2C+Ottawa%2C+ON!5e0!3m2!1sen!2sca!4v1554603667239!5m2!1sen!2sca"
             width="600"
             height="450"
