@@ -402,21 +402,7 @@ const IndexPageTemplate = ({ quote, mainText, mainImage, topPackage }) => {
           </Testimonial>
         </TestimonialContent>
       </TestimonialWrapper>
-      <TheTuneSection>
-        <TheTuneText>{getMainText()}</TheTuneText>
-        <TheTuneContainer>
-          <TracedImage imageInfo={topPackage.packageImage} />
-          <TheTuneTitle>{topPackage.title}</TheTuneTitle>
-          <TheTunePrice>{topPackage.price}</TheTunePrice>
-          <TheTuneButton to="/thetune" state={{ srcUrl: '/' }}>
-            <TheTuneButtonRing>
-              <TheTuneButtonInside>
-                <TheTuneButtonText>Details</TheTuneButtonText>
-              </TheTuneButtonInside>
-            </TheTuneButtonRing>
-          </TheTuneButton>
-        </TheTuneContainer>
-      </TheTuneSection>
+     n>
       <Location>
         <div>Located near Carling/Kirkwood, Ottawa.</div>
         <div>By appointment only</div>
