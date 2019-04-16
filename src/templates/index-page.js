@@ -71,110 +71,6 @@ const Author = styled.div`
   letter-spacing: 1px;
 `
 
-const TheTuneSection = styled.section`
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  margin: 8rem 2rem;
-
-  ${media.largeAndUp`
-    flex-direction: row;
-    align-items: flex-start;
-  `}
-`
-
-const TheTuneText = styled.div`
-  font-size: 1.8rem;
-  line-height: 2.8rem;
-  padding: 0 2rem;
-  letter-spacing: 0.4px;
-  color: ${color.black.main};
-  font-weight: 500;
-  margin-bottom: 6rem;
-  max-width: 45rem;
-`
-
-const LeadingCapital = styled.span`
-  font-weight: 600;
-  font-size: 3rem;
-  font-style: italic;
-`
-
-const TheTuneContainer = styled.div`
-  box-shadow: 0 0px 70px 3px rgba(0, 0, 0, 0.2);
-  position: relative;
-  width: 100%;
-  max-width: 37rem;
-`
-
-const TheTuneOverlayText = styled.div`
-  position: absolute;
-  color: #fff;
-  background: rgba(0, 0, 0, 0.5);
-  text-transform: uppercase;
-  padding: 1rem;
-  font-weight: 300;
-`
-
-const TheTuneTitle = styled(TheTuneOverlayText)`
-  top: 2rem;
-  left: 1rem;
-  font-size: 4rem;
-`
-
-const TheTunePrice = styled(TheTuneOverlayText)`
-  top: 8rem;
-  left: 13rem;
-  font-size: 3rem;
-`
-
-const TheTuneButton = styled(Link)`
-  position: absolute;
-  bottom: 4rem;
-  right: 1rem;
-  height: 13rem;
-  width: 13rem;
-  background: ${color.blue.dark};
-  border: none;
-  padding: 0;
-
-  border-radius: 50%;
-  box-shadow: 0px 5px 14px 0px hsla(0, 0%, 0%, 0.95);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-`
-
-const TheTuneButtonRing = styled.div`
-  background: #fff;
-  height: 12rem;
-  width: 12rem;
-  border-radius: 50%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-`
-
-const TheTuneButtonInside = styled.div`
-  background: ${color.blue.dark};
-  height: 11rem;
-  width: 11rem;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border-radius: 50%;
-`
-
-const TheTuneButtonText = styled.div`
-  color: #fff;
-  font-size: 2.2rem;
-  font-weight: 500;
-  padding: 0.3rem 0.3rem;
-  border-bottom: 2px solid #fff;
-  margin-top: -1rem;
-`
-
 const PathWrapper = styled.div`
   display: flex;
   justify-content: center;
@@ -345,15 +241,7 @@ const Copyright = styled.div`
   font-size: 1.2rem;
 `
 
-const IndexPageTemplate = ({ quote, mainText, mainImage, topPackage }) => {
-  const getMainText = () => {
-    return (
-      <React.Fragment>
-        <LeadingCapital>{mainText[0]}</LeadingCapital>
-        {mainText.substring(1)}
-      </React.Fragment>
-    )
-  }
+const IndexPageTemplate = ({ quote, mainImage }) => {
   return (
     <Layout>
       <Main>
@@ -402,7 +290,7 @@ const IndexPageTemplate = ({ quote, mainText, mainImage, topPackage }) => {
           </Testimonial>
         </TestimonialContent>
       </TestimonialWrapper>
-     n>
+
       <Location>
         <div>Located near Carling/Kirkwood, Ottawa.</div>
         <div>By appointment only</div>
@@ -426,27 +314,17 @@ const IndexPageTemplate = ({ quote, mainText, mainImage, topPackage }) => {
 
 IndexPageTemplate.propTypes = {
   quote: PropTypes.arrayOf(PropTypes.shape({ text: PropTypes.string })),
-  mainText: PropTypes.string,
   mainImage: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
-  topPackage: PropTypes.shape({
-    title: PropTypes.string,
-    price: PropTypes.string,
-  }),
 }
 
 const IndexPage = ({ data }) => {
   const {
-    frontmatter: { quote, mainText, mainImage, topPackage },
+    frontmatter: { quote, mainImage },
   } = data.markdownRemark
 
   return (
     <Layout>
-      <IndexPageTemplate
-        quote={quote}
-        mainText={mainText}
-        mainImage={mainImage}
-        topPackage={topPackage}
-      />
+      <IndexPageTemplate quote={quote} mainImage={mainImage} />
     </Layout>
   )
 }
@@ -468,25 +346,11 @@ export const indexPageQuery = graphql`
         quote {
           text
         }
-        mainText
         mainImage {
           image {
             childImageSharp {
               fluid(maxWidth: 2048, quality: 100) {
                 ...GatsbyImageSharpFluid
-              }
-            }
-          }
-        }
-        topPackage {
-          title
-          price
-          packageImage {
-            image {
-              childImageSharp {
-                fluid(maxWidth: 2048, quality: 100) {
-                  ...GatsbyImageSharpFluid
-                }
               }
             }
           }
