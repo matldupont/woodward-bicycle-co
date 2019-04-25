@@ -197,9 +197,10 @@ const TestimonialHeading = styled.h3`
   font-size: 3rem;
   font-weight: 300;
   margin-bottom: 2rem;
+  text-align: center;
 
   ${media.smallAndDown`
-    font-size: 2.4rem;
+    font-size: 2.2rem;
   `}
 `
 
