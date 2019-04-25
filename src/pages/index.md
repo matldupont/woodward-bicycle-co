@@ -9,7 +9,7 @@ mainText: >
   appointment in order to give you our undivided attention and all
   starts with…
 mainImage:
-  image: /img/main.jpg
+  image: /img/copper.jpg
 topPackage:
   title: the tune
   price: $145

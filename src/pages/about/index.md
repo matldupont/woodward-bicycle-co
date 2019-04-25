@@ -17,7 +17,7 @@ paragraph3: >-
   find one.
 paragraph4: 'Dang! '
 roundImage:
-  image: /img/b3aad8ba-9583-4ef1-b4cc-7e834e9ae511.png
+  image: /img/headshot.jpg
 bannerImage:
   image: /img/4dd51135-bad7-4aab-8aff-abc95f4516cc.jpeg
 fullImage:

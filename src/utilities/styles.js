@@ -7,7 +7,7 @@ export const border = {
 
 export const color = {
   white: '#FFFFFF',
-  gold: '#EBC85B',
+  gold: '#fdf15c',
   grey: {
     extraLight: '#DDD',
     light: '#787878',
@@ -21,6 +21,13 @@ export const color = {
   black: {
     main: '#000000',
     alt: '#222',
+  },
+  teal: {
+    main: '#8ce6de',
+    dark: '#68b5ae',
+  },
+  golder: {
+    main: '#f7e580',
   },
 }
 

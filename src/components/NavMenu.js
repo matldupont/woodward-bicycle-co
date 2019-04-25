@@ -133,7 +133,7 @@ const NavMenu = ({ isOpen }) => {
   return (
     <NavMenuWrapper isOpen={isOpen}>
       <NavLinks isOpen={isOpen}>
-        <Link to="/book">Book Now</Link>
+        <Link to="/book-now">Book Now</Link>
         <NavDivider isOpen={isOpen} />
         <Link to="/services">Services</Link>
         <NavDivider isOpen={isOpen} />

@@ -19,4 +19,8 @@ export const Heading = styled.h1`
   letter-spacing: 3px;
 
   margin: 1.2rem 0;
+
+  ${({ center }) => {
+    return center && 'text-align: center;'
+  }}
 `

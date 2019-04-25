@@ -99,7 +99,7 @@ const Divider = styled.div`
 
   ${media.smallAndDown`
     height: 1px;
-    width: 30rem;
+    width: 25rem;
     align-self: center;
   `}
 `
@@ -153,23 +153,54 @@ const TestimonialContent = styled.div`
   flex-direction: column;
   flex: 1;
 
+  ${media.smallAndDown`
+    padding: 0;
+  `}
+
   & > * {
     max-width: 70rem;
     padding: 4rem;
     border-radius: 1px;
   }
 
-  & > *:first-child {
+  & > *:nth-child(odd) {
     align-self: flex-start;
-    border: 1px solid #333;
+    margin-top: -2rem;
   }
 
-  & > *:last-child {
+  & > *:nth-child(even) {
     margin-top: -2rem;
     align-self: flex-end;
     background-color: #333;
     color: #eaeaea;
   }
+
+  & > *:nth-child(1) {
+    background-color: ${color.gold};
+  }
+
+  & > *:nth-child(2) {
+    background-color: ${color.grey.light};
+  }
+
+  & > *:nth-child(3) {
+    background-color: ${color.teal.main};
+
+    ${media.mediumAndUp`
+      margin-left: 5rem;
+    `}
+  }
+`
+
+const TestimonialHeading = styled.h3`
+  align-self: center;
+  font-size: 3rem;
+  font-weight: 300;
+  margin-bottom: 2rem;
+
+  ${media.smallAndDown`
+    font-size: 2.4rem;
+  `}
 `
 
 const Testimonial = styled.div`
@@ -272,6 +303,9 @@ const IndexPageTemplate = ({ quote, mainImage }) => {
           </PathLinkWrapper>
         </PathContentWrapper>
       </PathWrapper>
+      <TestimonialHeading>
+        What are people saying about WBco?
+      </TestimonialHeading>
       <TestimonialWrapper>
         <TestimonialContent>
           <Testimonial>
@@ -287,6 +321,12 @@ const IndexPageTemplate = ({ quote, mainImage }) => {
             this guy with all my bikes, definitely my go-to guy for bikes!"`}
             </TestimonialQuote>
             <TestimonialAuthor>- Chris</TestimonialAuthor>
+          </Testimonial>
+          <Testimonial>
+            <TestimonialQuote>
+              {`"Are you eating enough?! You're looking thin..."`}
+            </TestimonialQuote>
+            <TestimonialAuthor>- Mom</TestimonialAuthor>
           </Testimonial>
         </TestimonialContent>
       </TestimonialWrapper>
