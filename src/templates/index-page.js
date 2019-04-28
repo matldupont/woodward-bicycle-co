@@ -49,7 +49,7 @@ const TextContainer = styled.h1`
   top: 4rem;
   right: 0;
   width: calc(100vw - 4rem);
-  background: ${color.grey.transparent};
+  background: ${color.teal.transparent};
   color: ${color.white};
   padding: 2rem;
   font-size: 2.6rem;

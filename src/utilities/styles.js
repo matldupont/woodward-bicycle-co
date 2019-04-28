@@ -25,6 +25,7 @@ export const color = {
   teal: {
     main: '#8ce6de',
     dark: '#68b5ae',
+    transparent: '#68b5aeBB',
   },
   golder: {
     main: '#f7e580',
