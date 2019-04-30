@@ -13,13 +13,17 @@ const AboutWrapper = styled(Wrapper)`
 `
 
 const AboutParagraph = styled.p`
-  font-size: 1.6rem;
+  font-size: 1.8rem;
   line-height: 2.4rem;
 
   &:not(:last-child) {
     margin-bottom: 5rem;
   }
 `
+const TopParagraph = styled(AboutParagraph)`
+  font-size: 2rem;
+`
+
 const CircleImageWrapper = styled.figure`
   width: 18rem;
   height: 18rem;
@@ -37,17 +41,19 @@ const BannerImageWrapper = styled.figure`
   overflow: hidden;
   margin: 3rem 0;
   width: 100%;
+  max-width: 90rem;
+  align-self: center;
 
   div {
     transform: translateY(-40%);
   }
 
   ${media.mediumAndUp`
-    height: 20rem;
+    height: 15rem;
   `};
 
   ${media.largeAndUp`
-    height: 30rem;
+    height: 20rem;
   `}
 `
 
@@ -65,7 +71,7 @@ const AboutPageTemplate = ({
     <Layout>
       <AboutWrapper>
         <Heading>{heading}</Heading>
-        <AboutParagraph>{paragraph1}</AboutParagraph>
+        <TopParagraph>{paragraph1}</TopParagraph>
         <CircleImageWrapper>
           <TracedImage imageInfo={roundImage} />
         </CircleImageWrapper>

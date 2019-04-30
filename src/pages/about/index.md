@@ -1,21 +1,14 @@
 ---
 templateKey: about-page
 title: About Woodward Bicycle Co.
-heading: "Hi, I'm Lukasz Dybinski."
+heading: 'Hi,'
 paragraph1: >-
-  I worked as the Master Mechanic at MEC Ottawa for 6 years, before starting
-  Woodward Bicycle Co. in the summer of 2018. I'm passionate about bikes, and
-  launched WBco with the intention to transform the typical experience of
-  getting your bike serviced into a personal, fun, and efficient one.
+  I’m Lukasz Dybinski and I am passionate about bikes!
 paragraph2: >-
-  I'm committed to service excellence, and to help people get outside, enjoy
-  their rides, and get excited about their bikes.
+  I launched Woodward Bicycle Co in the summer of 2018 after working as Master mechanic for MEC for 6 years with the intention of transforming the typical experience of getting your bike serviced into a personal, fun and informative one.  I want to get you excited to ride your bike again!
 paragraph3: >-
-  To ensure there is enough time to create this experience (and to avoid
-  lengthly wait times for you), I provide services by appointment only. If you
-  don't see an appointment time that works for you, give me a shout and we'll
-  find one.
-paragraph4: 'Dang! '
+  I plan on doing all this by providing you with the highest quality of repairs, teaching you want you want to know about your ride, and answering any question you may have so that you can go ride your bike with confidence!
+paragraph4: To ensure there is enough time to do this,  i provide all my services by appointment only.  If you don’t see and appointment time that works for you, shoot me an email and we will find one that does 🤟🏻.
 roundImage:
   image: /img/headshot.jpg
 bannerImage:
